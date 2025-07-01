@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Volunteering! - ImpactBridge</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Dark slate gray text */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #cbd5e1; /* Light gray track */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #64748b; /* Darker gray thumb */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; /* Even darker gray on hover */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation Bar (Consistent with other pages) -->
+        <nav class="bg-white shadow-sm py-4 px-6 md:px-12 lg:px-24 flex justify-between items-center fixed w-full z-10 top-0">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600">ImpactBridge</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Home</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Causes</a>
+                <a href="volunteer.html" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Volunteer</a>
+                <a href="donate.html" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Donate</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">About Us</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Contact</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="donate.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+                    Donate Now
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 fixed top-16 w-full z-10">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out w-full text-center py-2">Home</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out w-full text-center py-2">Causes</a>
+                <a href="volunteer.html" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out w-full text-center py-2">Volunteer</a>
+                <a href="donate.html" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out w-full text-center py-2">Donate</a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out w-full text-center py-2">Contact</a>
+                <a href="donate.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 w-auto">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+
+        <main class="flex-grow container mx-auto px-6 py-16 md:py-20 lg:py-24 mt-16 flex items-center justify-center">
+            <section class="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg text-center">
+                <div class="text-green-500 mb-6">
+                    <svg class="w-20 h-20 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Thank You for Volunteering!</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Your application has been successfully submitted. We truly appreciate your willingness to contribute your time and skills to ImpactBridge.
+                </p>
+                <p class="text-gray-600 mb-10">
+                    We will review your application and get in touch with you shortly regarding next steps and potential volunteer opportunities. Please keep an eye on your inbox for a confirmation email.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="index.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+                        Back to Homepage
+                    </a>
+                    <a href="#" class="bg-gray-200 text-gray-700 hover:bg-gray-300 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75">
+                        Explore Causes
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer (Consistent with other pages) -->
+        <footer class="bg-gray-800 text-white py-10 px-6 md:px-12 lg:px-24 rounded-t-3xl shadow-inner">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ImpactBridge</h3>
+                    <p class="text-gray-400 text-sm">Connecting hearts with causes, one donation at a time.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.002 3.797.048.843.038 1.48.15 2.07.355.62.207 1.135.455 1.6.92.465.466.713.98 1.07 1.6.36.62.472 1.257.513 2.1.043.978.047 1.25.047 3.295 0 2.044-.004 2.317-.047 3.295-.04.843-.153 1.48-.356 2.07-.205.62-.454 1.135-.92 1.6-.466.465-.98.713-1.6.92-.62.205-1.257.318-2.1.355-.978.043-1.25.047-3.295.047s-2.317-.004-3.295-.047c-.843-.04-1.48-.153-2.07-.356-.62-.205-1.135-.454-1.6-.92-.465-.466-.713-.98-1.07-1.6-.36-.62-.472-1.257-.513-2.1-.043-.978-.047-1.25-.047-3.295s.004-2.317.047-3.295c.04-.843.153-1.48.356-2.07.205-.62.454-1.135.92-1.6.466-.465.98-.713 1.6-.92.62-.205 1.257-.318 2.1-.355C9.988 2.002 10.26 2 12.315 2zm0 2.13c-2.04 0-2.305.008-3.29.048-.78.036-1.28.14-1.74.305-.44.155-.79.345-1.07.62-.28.28-.47.63-.62 1.07-.16.46-.27 1.01-.305 1.74-.04.98-.048 1.245-.048 3.29s.008 2.305.048 3.29c.036.78.14 1.28.305 1.74.155.44.345.79.62 1.07.28.28.63.47 1.07.62.46.16 1.01.27 1.74.305.98.04 1.245.048 3.29.048s2.305-.008 3.29-.048c.78-.036 1.28-.14 1.74-.305.44-.155.79-.345 1.07-.62.28-.28.47-.63.62-1.07.16-.46.27-1.01.305-1.74.04-.98.048-1.245.048-3.29s-.008-2.305-.048-3.29c-.036-.78-.14-1.28-.305-1.74-.155-.44-.345-.79-.62-1.07-.28-.28-.63-.47-1.07-.62-.46-.16-1.01-.27-1.74-.305-.98-.04-1.245-.048-3.29-.048zM12.315 6.857c-2.345 0-4.25 1.905-4.25 4.25s1.905 4.25 4.25 4.25 4.25-1.905 4.25-4.25-1.905-4.25-4.25-4.25zM12.315 13a1.64 1.64 0 100-3.28 1.64 1.64 0 000 3.28z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.22 8.22 0 01-2.606.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 014 9.659v.05c0 4.475 3.197 8.18 7.46 9.012a4.147 4.147 0 01-1.851.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.005c1.115.122 2.29.18 3.48.18z" /></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">How It Works</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p class="text-gray-400 text-sm">Email: info@impactbridge.org</p>
+                    <p class="text-gray-400 text-sm">Phone: +1 (123) 456-7890</p>
+                    <p class="text-gray-400 text-sm">Address: 123 Impact Lane, Charity City, 98765</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 ImpactBridge. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside (optional)
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

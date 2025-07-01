@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpactBridge - Volunteer Sign Up</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean look */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-4">
+    <!-- Navigation Bar -->
+    <nav class="w-full bg-blue-800 text-white p-4 shadow-lg rounded-b-lg mb-8">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-bold mb-4 md:mb-0">
+                ImpactBridge
+            </div>
+            <div class="flex flex-wrap justify-center md:space-x-6 space-x-2">
+                <a href="awareness.html" class="py-2 px-3 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">Awareness</a>
+                <a href="volunteer.html" class="py-2 px-3 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">Volunteer</a>
+                <a href="thankyou.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 ml-4">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 max-w-2xl w-full">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-green-700 mb-6 text-center">
+            Become a Volunteer
+        </h1>
+        <p class="text-lg md:text-xl text-gray-700 mb-8 text-center">
+            Your time and skills can make a significant impact. Join our team of dedicated volunteers!
+        </p>
+
+        <form class="space-y-6">
+            <!-- Full Name -->
+            <div>
+                <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe"
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base" required>
+            </div>
+
+            <!-- Email Address -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (123) 456-7890"
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base">
+            </div>
+
+            <!-- Areas of Interest -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Areas of Interest (Select all that apply)</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="flex items-center">
+                        <input id="interestEducation" name="interest" type="checkbox" value="education"
+                               class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded">
+                        <label for="interestEducation" class="ml-2 block text-sm text-gray-900">Education</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="interestHealthcare" name="interest" type="checkbox" value="healthcare"
+                               class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded">
+                        <label for="interestHealthcare" class="ml-2 block text-sm text-gray-900">Healthcare</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="interestEnvironment" name="interest" type="checkbox" value="environment"
+                               class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded">
+                        <label for="interestEnvironment" class="ml-2 block text-sm text-gray-900">Environment</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="interestCommunity" name="interest" type="checkbox" value="community"
+                               class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded">
+                        <label for="interestCommunity" class="ml-2 block text-sm text-gray-900">Community Outreach</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="interestEvents" name="interest" type="checkbox" value="events"
+                               class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded">
+                        <label for="interestEvents" class="ml-2 block text-sm text-gray-900">Event Support</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="interestAdmin" name="interest" type="checkbox" value="admin"
+                               class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300 rounded">
+                        <label for="interestAdmin" class="ml-2 block text-sm text-gray-900">Administrative Tasks</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability -->
+            <div>
+                <label for="availability" class="block text-sm font-medium text-gray-700 mb-1">Your Availability</label>
+                <textarea id="availability" name="availability" rows="3" placeholder="e.g., Weekends, Tuesdays 2-5 PM, Flexible"
+                          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-base"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:scale-105">
+                    Sign Up Now
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

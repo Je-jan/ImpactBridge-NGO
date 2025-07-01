@@ -3,117 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImpactBridge - Bridging Hearts, Building Futures</title>
+    <title>ImpactBridge - Empowering Change Together</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light gray background */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .nav-link-hover:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease-in-out;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="bg-gray-50 text-gray-800">
+
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md p-4">
+    <nav class="bg-white shadow-sm p-4 md:p-6 sticky top-0 z-50 rounded-b-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo/Home Link -->
-            <a href="index.html" class="text-2xl font-bold text-blue-700">ImpactBridge</a>
-            <div class="space-x-4">
-                <a href="index.html#about" class="text-gray-700 hover:text-blue-700 font-medium">About Us</a>
-                <a href="index.html#causes" class="text-gray-700 hover:text-blue-700 font-medium">Our Causes</a>
-                <a href="volunteer-signup.html" class="text-gray-700 hover:text-blue-700 font-medium">Volunteer</a>
-                <a href="donation-page.html" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">Donate Now</a>
+            <a href="index.html" class="text-2xl font-bold text-blue-600 flex items-center gap-2">
+                <i class="fas fa-hand-holding-heart text-blue-500"></i> ImpactBridge
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2 nav-link-hover">Home</a>
+                <a href="causes.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2 nav-link-hover">Causes</a>
+                <a href="volunteer.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2 nav-link-hover">Volunteer</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2 nav-link-hover">About Us</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2 nav-link-hover">Contact</a>
             </div>
+            <a href="donate.html" class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">Donate Now</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-2 pb-3">
+            <a href="index.html" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">Home</a>
+            <a href="causes.html" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">Causes</a>
+            <a href="volunteer.html" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">Volunteer</a>
+            <a href="about.html" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">About Us</a>
+            <a href="contact.html" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md px-3 py-2">Contact</a>
+            <a href="donate.html" class="block bg-blue-600 text-white px-5 py-2 rounded-full text-center hover:bg-blue-700 transition duration-300 shadow-md mt-2">Donate Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 px-4 overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Helping+Hands');"></div>
-        <div class="relative container mx-auto text-center z-10">
-            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">Bridging Hearts, Building Futures</h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
-                Join ImpactBridge in creating a world where every individual has the opportunity to thrive. Your support makes a tangible difference.
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-16 md:py-24 rounded-b-lg shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                Empowering Change, One Donation at a Time
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200">
+                Connect with trusted NGOs and make a real difference in the lives of those who need it most.
             </p>
-            <div class="flex justify-center space-x-4">
-                <a href="donation-page.html" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    Make a Donation
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-400">
+                <a href="causes.html" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg transform hover:scale-105">
+                    Explore Causes <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                <a href="volunteer-signup.html" class="border-2 border-white text-white font-bold px-8 py-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:bg-white hover:text-blue-800">
-                    Become a Volunteer
+                <a href="volunteer.html" class="border border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300 shadow-lg transform hover:scale-105">
+                    Volunteer Now
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- About Us Section -->
-    <section id="about" class="py-16 px-4 bg-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800 mb-8">About ImpactBridge</h2>
-            <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                ImpactBridge is a non-profit organization dedicated to empowering communities through sustainable development initiatives. We focus on education, healthcare, environmental protection, and poverty alleviation, working hand-in-hand with local populations to create lasting positive change. Our mission is to bridge the gap between need and resources, fostering a brighter future for all.
-            </p>
-        </div>
-    </section>
+    <main class="container mx-auto px-4 py-12 md:py-16">
 
-    <!-- Our Causes Section -->
-    <section id="causes" class="py-16 px-4 bg-blue-50">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Our Core Causes</h2>
+        <!-- Our Mission Section -->
+        <section class="mb-16 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                At ImpactBridge, we believe in the power of collective giving. Our mission is to create a transparent and efficient platform that connects generous donors with verified non-governmental organizations, ensuring every contribution creates a tangible, positive impact on society. We strive to foster a community where giving is easy, impactful, and trustworthy.
+            </p>
+        </section>
+
+        <!-- Featured Causes Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">Featured Causes</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cause Card 1: Education -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=📚" alt="Education Icon" class="w-24 h-24 mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Quality Education</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Providing access to quality education for underprivileged children and adults, equipping them with the knowledge and skills for a better future.
-                    </p>
+                <!-- Cause Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/ADD8E6/000?text=Education" alt="Education Cause" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Education for All</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Support initiatives that provide quality education and learning resources to underprivileged children.
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+                            <span><i class="fas fa-users mr-1"></i> 1,200 Donors</span>
+                            <span><i class="fas fa-dollar-sign mr-1"></i> Raised: $50,000</span>
+                        </div>
+                        <a href="donate.html" class="block w-full bg-blue-600 text-white text-center py-3 rounded-full hover:bg-blue-700 transition duration-300 font-medium">
+                            Donate Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
                 </div>
-                <!-- Cause Card 2: Healthcare -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/100x100/10B981/FFFFFF?text=🏥" alt="Healthcare Icon" class="w-24 h-24 mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Accessible Healthcare</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Ensuring basic healthcare services reach remote and underserved communities, promoting well-being and preventing diseases.
-                    </p>
+
+                <!-- Cause Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/90EE90/000?text=Healthcare" alt="Healthcare Cause" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Healthcare Access</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Help provide essential medical care, medicines, and health education to vulnerable communities.
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+                            <span><i class="fas fa-users mr-1"></i> 950 Donors</span>
+                            <span><i class="fas fa-dollar-sign mr-1"></i> Raised: $45,000</span>
+                        </div>
+                        <a href="donate.html" class="block w-full bg-blue-600 text-white text-center py-3 rounded-full hover:bg-blue-700 transition duration-300 font-medium">
+                            Donate Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
                 </div>
-                <!-- Cause Card 3: Environment -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
-                    <img src="https://placehold.co/100x100/06B6D4/FFFFFF?text=🌳" alt="Environment Icon" class="w-24 h-24 mb-6">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Environmental Protection</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Initiating and supporting projects that protect our planet, including reforestation, waste management, and clean energy solutions.
-                    </p>
+
+                <!-- Cause Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/600x400/FFDAB9/000?text=Environment" alt="Environment Cause" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Environmental Protection</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Contribute to projects focused on conservation, climate action, and sustainable living.
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+                            <span><i class="fas fa-users mr-1"></i> 780 Donors</span>
+                            <span><i class="fas fa-dollar-sign mr-1"></i> Raised: $38,000</span>
+                        </div>
+                        <a href="donate.html" class="block w-full bg-blue-600 text-white text-center py-3 rounded-full hover:bg-blue-700 transition duration-300 font-medium">
+                            Donate Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="text-center mt-10">
+                <a href="causes.html" class="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-300 transition duration-300 shadow-md transform hover:scale-105">
+                    View All Causes <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
 
-    <!-- Call to Action for Donation -->
-    <section class="py-16 px-4 bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-6">Your Contribution Matters</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">
-                Every donation, no matter how small, fuels our efforts and brings us closer to our vision. Help us make a lasting impact.
+        <!-- How It Works Section -->
+        <section class="bg-blue-50 p-8 md:p-12 rounded-xl shadow-inner mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">How ImpactBridge Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-600 mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">1. Discover Causes</h3>
+                    <p class="text-gray-600">Browse through a wide range of verified NGOs and their impactful projects.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-600 mb-4">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">2. Donate Securely</h3>
+                    <p class="text-gray-600">Make secure donations using our trusted payment gateway, with full transparency.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-600 mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">3. Track Impact</h3>
+                    <p class="text-gray-600">Receive updates and see the real-world impact of your valuable contributions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">What Our Donors Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500">
+                    <p class="text-gray-700 italic mb-4">
+                        "ImpactBridge has made it incredibly easy to find and support causes I care about. The transparency and ease of use are truly commendable."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/E0BBE4/000?text=JD" alt="Donor Avatar" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-semibold text-gray-900">Jane Doe</p>
+                            <p class="text-sm text-gray-500">Regular Donor</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+                    <p class="text-gray-700 italic mb-4">
+                        "I love that I can track my donations and see the direct impact they have. ImpactBridge is a game-changer for charitable giving."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/957DAD/000?text=MS" alt="Donor Avatar" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-semibold text-gray-900">Mark Smith</p>
+                            <p class="text-sm text-gray-500">First-time Donor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-10 md:p-16 rounded-xl shadow-lg text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Ready to Make a Difference?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Join the ImpactBridge community today and be a part of something truly meaningful.
             </p>
-            <a href="donation-page.html" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-10 py-5 rounded-full shadow-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Donate Today
+            <a href="donate.html" class="bg-white text-blue-600 px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition duration-300 shadow-xl transform hover:scale-105">
+                Start Donating Now <i class="fas fa-heart ml-2"></i>
             </a>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-4 mt-auto">
-        <div class="container mx-auto text-center md:flex md:justify-between md:items-center">
-            <p class="mb-4 md:mb-0">&copy; 2025 ImpactBridge. All rights reserved.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a>
-                <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
-                <a href="#" class="text-gray-300 hover:text-white">Contact Us</a>
+    <footer class="bg-gray-900 text-gray-300 py-8 md:py-12 mt-16 rounded-t-lg shadow-inner">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">ImpactBridge</h3>
+                <p class="text-sm">Empowering change by connecting donors with trusted NGOs.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter text-lg"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin-in text-lg"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                    <li><a href="causes.html" class="text-gray-300 hover:text-white transition duration-300">Causes</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">FAQ</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+                <p class="text-sm">123 Charity Lane, Giving City, GC 12345</p>
+                <p class="text-sm mt-2">Email: info@impactbridge.org</p>
+                <p class="text-sm mt-2">Phone: +1 (555) 123-4567</p>
             </div>
         </div>
+        <div class="text-center text-sm text-gray-500 mt-8 pt-6 border-t border-gray-700">
+            &copy; 2025 ImpactBridge. All rights reserved.
+        </div>
     </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

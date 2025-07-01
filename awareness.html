@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpactBridge - Empowering Change Through Giving</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .gradient-bg-impact {
+            background: linear-gradient(to right, #3b82f6, #6366f1); /* Blue to Indigo */
+        }
+        .gradient-text-impact {
+            background: linear-gradient(to right, #3b82f6, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 flex justify-between items-center rounded-b-lg">
+        <div class="flex items-center">
+            <svg class="w-8 h-8 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            <h1 class="text-2xl font-bold text-gray-900">ImpactBridge</h1>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="awareness.html" class="text-blue-600 hover:text-blue-700 font-medium transition duration-300 ease-in-out">Home</a>
+            <a href="awareness.html#mission" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Our Mission</a>
+            <a href="awareness.html#impact" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Impact</a>
+            <a href="volunteer.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Volunteer</a>
+            <a href="donation.html" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Donate</a>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 hidden md:hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-mobile-menu" class="text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-6 text-xl mt-8">
+            <a href="awareness.html" class="text-blue-400 hover:text-blue-300 transition duration-300 ease-in-out" onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden');">Home</a>
+            <a href="awareness.html#mission" class="text-white hover:text-blue-400 transition duration-300 ease-in-out" onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden');">Our Mission</a>
+            <a href="awareness.html#impact" class="text-white hover:text-blue-400 transition duration-300 ease-in-out" onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden');">Impact</a>
+            <a href="volunteer.html" class="text-white hover:text-blue-400 transition duration-300 ease-in-out" onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden');">Volunteer</a>
+            <a href="donation.html" class="text-white hover:text-blue-400 transition duration-300 ease-in-out" onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden');">Donate</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-white py-20 md:py-32 text-center overflow-hidden rounded-lg mx-4 md:mx-12 mt-8 shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-75"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 gradient-text-impact">
+                Bridge the Gap. Create Lasting Change.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-10">
+                Join ImpactBridge in empowering communities and transforming lives. Every contribution builds a stronger future.
+            </p>
+            <a href="donation.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Donate Now
+            </a>
+            <a href="volunteer.html" class="inline-block ml-4 text-blue-600 hover:text-blue-700 font-bold py-3 px-8 rounded-full border border-blue-600 hover:border-blue-700 transition duration-300 ease-in-out">
+                Become a Volunteer
+            </a>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section id="mission" class="py-16 md:py-24 px-6 md:px-12 bg-gray-50 rounded-lg mx-4 md:mx-12 mt-8 shadow-lg">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our Mission: Building a Better Tomorrow</h2>
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                At ImpactBridge, we are dedicated to addressing critical global challenges by connecting compassionate donors with impactful grassroots initiatives. Our mission is to foster sustainable development, provide humanitarian aid, and champion social justice around the world.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                We believe in the power of collective action. By facilitating transparent and efficient donations, we ensure that your generosity directly supports projects that uplift communities, protect the environment, and empower individuals to lead healthier, more fulfilling lives.
+            </p>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Compassion</h3>
+                    <p class="text-gray-600 text-sm">Driven by empathy for those in need.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Transparency</h3>
+                    <p class="text-gray-600 text-sm">Ensuring every donation makes a visible difference.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Impact</h3>
+                    <p class="text-gray-600 text-sm">Focused on creating real, measurable change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-16 md:py-24 px-6 md:px-12 bg-white rounded-lg mx-4 md:mx-12 mt-8 shadow-lg">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Your Donation. Their Future.</h2>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">How Your Contribution Makes a Difference</h3>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Every dollar you donate through ImpactBridge goes directly to verified projects that are making a tangible difference on the ground. We support initiatives focused on:
+                </p>
+                <ul class="list-disc list-inside text-left text-gray-700 text-lg space-y-2">
+                    <li>Providing clean water and sanitation to remote villages.</li>
+                    <li>Funding education for underprivileged children.</li>
+                    <li>Delivering emergency relief during natural disasters.</li>
+                    <li>Supporting sustainable agriculture and food security.</li>
+                    <li>Empowering women and girls through vocational training.</li>
+                </ul>
+                <p class="text-lg text-gray-600 leading-relaxed mt-6">
+                    See the ripple effect of your generosity. Together, we can build a world where everyone has the opportunity to thrive.
+                </p>
+            </div>
+            <div class="relative">
+                <img src="https://placehold.co/600x400/818cf8/ffffff?text=Community+Impact" alt="Community Impact" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                <div class="absolute bottom-4 left-4 bg-white bg-opacity-90 px-4 py-2 rounded-lg shadow-md">
+                    <p class="text-sm text-gray-700 font-medium">"Your support changed everything for us." - Local Beneficiary</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Donate Section -->
+    <section class="py-16 md:py-24 px-6 md:px-12 text-center rounded-lg mx-4 md:mx-12 mt-8 gradient-bg-impact text-white shadow-lg">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Be the Change. Donate Today.</h2>
+        <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+            Your generous contribution, no matter the size, helps us continue our vital work and reach more communities in need.
+        </p>
+        <a href="donation.html" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+            Make a Donation
+        </a>
+        <p class="text-sm text-blue-100 mt-4">100% of your donation goes directly to programs.*</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8 px-6 md:px-12 mt-8 rounded-t-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2025 ImpactBridge. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 ease-in-out">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('hidden');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('hidden');
+        });
+
+        // Close mobile menu when a link inside it is clicked
+        mobileMenuOverlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
